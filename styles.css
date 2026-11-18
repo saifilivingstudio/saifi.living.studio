@@ -376,3 +376,15 @@ section{position:relative}
 .years h3{font-size:var(--s3);color:var(--forest);margin-bottom:8px}
 .years p{font-size:var(--s1);color:var(--graphite);max-width:36ch}
 @media (max-width:760px){.years{grid-template-columns:1fr;padding:0 0 0 28px}.years::before{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}.years li::before{left:-22px;top:12px;width:17px;height:1px}}
+
+/* ---------- inner page heads: text beside a photo, same rhythm as the home hero ---------- */
+.page-head.has-photo{padding:clamp(40px,6vw,80px) 0 clamp(48px,6vw,88px)}
+.ph-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:stretch}
+.has-photo h1{font-size:clamp(42px,4.8vw,76px);line-height:1.02;max-width:16ch}
+.has-photo .lead{max-width:42ch}
+.ph-text{display:flex;flex-direction:column;justify-content:center}
+.ph-photo{display:flex;flex-direction:column;margin:0}
+.ph-photo img{flex:1 1 auto;height:0;min-height:320px;width:100%;object-fit:cover}
+.measure-h{font-size:var(--s6);max-width:18ch;margin-bottom:24px}
+.lead-body{font-family:var(--serif);font-size:var(--s3);line-height:1.6;color:var(--graphite);max-width:60ch}
+@media (max-width:860px){.ph-grid{grid-template-columns:1fr;gap:28px}.ph-photo img{height:auto;min-height:0;aspect-ratio:3/2}}
