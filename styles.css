@@ -342,17 +342,19 @@ section{position:relative}
 .founder-lead{margin-top:32px;font-size:var(--s3);line-height:1.55;color:#DCD6C8;max-width:38ch}
 .portrait-ring{position:relative;aspect-ratio:1;width:100%;max-width:620px;justify-self:end}
 .pr-rings{position:absolute;inset:0;width:100%;height:100%}
-.portrait-ring img{position:absolute;left:50%;bottom:0;width:72%;height:auto;transform:translateX(-50%);
-  -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);
-  filter:drop-shadow(0 24px 40px rgba(20,28,21,.45));animation:pr-rise 1s cubic-bezier(.2,.7,.2,1) 1.5s both}
-@keyframes pr-rise{from{opacity:0;transform:translate(-50%,28px)}to{opacity:1;transform:translate(-50%,0)}}
-.pr-rings polyline{stroke-dasharray:1600;stroke-dashoffset:1600;animation:ring-draw 2.4s cubic-bezier(.3,0,.2,1) forwards}
-.pr-rings polyline:nth-child(5n){animation-delay:.15s}
-.pr-rings polyline:nth-child(5n+1){animation-delay:.3s}
-.pr-rings polyline:nth-child(5n+2){animation-delay:.45s}
-.pr-rings polyline:nth-child(5n+3){animation-delay:.6s}
+.pr-photo{position:absolute;left:17.5%;top:17.5%;width:65%;height:65%;border-radius:50%;overflow:hidden;
+  background:radial-gradient(circle at 50% 38%,#3A4B3F 0%,#26332A 62%,#1E2922 100%);
+  box-shadow:inset 0 0 0 1px rgba(176,138,91,.55);animation:pr-in .6s cubic-bezier(.2,.7,.2,1) .55s both}
+.pr-photo img{position:absolute;left:50%;bottom:0;width:84%;height:auto;transform:translateX(-50%);animation:pr-rise .7s cubic-bezier(.2,.7,.2,1) .7s both}
+@keyframes pr-in{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes pr-rise{from{opacity:0;transform:translate(-50%,24px)}to{opacity:1;transform:translate(-50%,0)}}
+.pr-rings polyline{stroke-dasharray:1900;stroke-dashoffset:1900;animation:ring-draw 1.1s cubic-bezier(.3,0,.2,1) forwards}
+.pr-rings polyline:nth-child(5n){animation-delay:.06s}
+.pr-rings polyline:nth-child(5n+1){animation-delay:.12s}
+.pr-rings polyline:nth-child(5n+2){animation-delay:.18s}
+.pr-rings polyline:nth-child(5n+3){animation-delay:.24s}
 @keyframes ring-draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.pr-rings polyline{animation:none;stroke-dashoffset:0}.portrait-ring img{animation:none}}
+@media (prefers-reduced-motion:reduce){.pr-rings polyline{animation:none;stroke-dashoffset:0}.pr-photo,.pr-photo img{animation:none}}
 @media (max-width:860px){.founder-grid{grid-template-columns:1fr}.portrait-ring{order:-1;justify-self:center;max-width:440px}}
 
 /* quote: his words, set large */
