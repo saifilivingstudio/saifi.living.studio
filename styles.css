@@ -331,3 +331,15 @@ section{position:relative}
 .site-strip img{width:100%;aspect-ratio:3/4;object-fit:cover}
 @media (max-width:860px){.site-strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .more{display:inline-block;margin-top:22px}
+
+/* ---------- about: founder ---------- */
+.founder{padding:clamp(40px,6vw,88px) 0 clamp(56px,7vw,104px)}
+.founder-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:end}
+.founder h1{font-size:clamp(42px,5vw,76px);line-height:1.02;max-width:14ch}
+.founder .lead{margin-top:28px;max-width:44ch}
+.founder-quote{margin-top:clamp(36px,5vw,56px);padding-top:28px;border-top:1px solid var(--rule);max-width:34em}
+.founder-quote p{font-family:var(--serif);font-style:italic;font-size:var(--s5);line-height:1.18;color:var(--forest)}
+.founder-quote p.tr{font-family:inherit;font-style:normal;font-size:var(--s2);line-height:1.5;color:var(--graphite);margin-top:14px;max-width:46ch}
+.founder-quote footer{margin-top:16px;font-size:var(--s1);color:var(--oak-ink);font-weight:500}
+.founder-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;background:var(--plaster)}
+@media (max-width:860px){.founder-grid{grid-template-columns:1fr}.founder-photo{order:-1;max-width:420px}}
