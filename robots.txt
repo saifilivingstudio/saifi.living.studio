@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saifilivingstudio.com/sitemap.xml
+Sitemap: https://www.saifilivingstudio.in/sitemap.xml
