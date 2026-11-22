@@ -5,6 +5,8 @@
 .p-oak{background:var(--oak);color:var(--ink)}
 .p-forest .d2,.p-forest h2,.p-forest h3{color:var(--cream)}
 .p-forest .body{color:rgba(242,236,225,.86)}
+.p-forest .listcard h3{color:var(--ink)}
+.p-forest .listcard .body{color:var(--body)}
 .sec-m{padding-top:clamp(48px,6vw,88px);padding-bottom:clamp(48px,6vw,88px)}
 .lead-p{font-size:19px;line-height:1.55;max-width:44ch}
 .two{display:flex;flex-wrap:wrap;gap:40px 72px;align-items:flex-start}
@@ -126,7 +128,7 @@
 .lightbox:target{display:flex}
 .lightbox .back{position:absolute;inset:0;cursor:zoom-out}
 .lightbox figure{position:relative;margin:0;max-width:min(92vw,1100px)}
-.lightbox img{max-height:80vh;width:auto;max-width:100%;border-radius:22px;margin:0 auto}
+.lightbox img{max-height:80vh;width:auto;height:auto;max-width:100%;border-radius:22px;margin:0 auto}
 .lightbox figcaption{margin-top:14px;text-align:center;color:var(--cream);font-weight:500}
 .lightbox .close{position:absolute;top:18px;right:18px;z-index:2;padding:12px 20px;border-radius:999px;background:var(--cream);color:var(--ink);font-weight:700}
 .snaps2{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-start;justify-content:center;margin-top:8px}

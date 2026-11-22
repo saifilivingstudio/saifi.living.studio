@@ -20,3 +20,25 @@ document.addEventListener('play', function (e) {
   if (e.target.tagName !== 'VIDEO') return;
   document.querySelectorAll('video').forEach(function (v) { if (v !== e.target) v.pause(); });
 }, true);
+
+/* Video posters load only when their slider comes near the screen, so they don't slow the first view. */
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video[data-poster]'));
+  if (!vids.length) return;
+  function show(v) { v.poster = v.getAttribute('data-poster'); v.removeAttribute('data-poster'); }
+  if (!('IntersectionObserver' in window)) { vids.forEach(show); return; }
+  var groups = new Map();
+  vids.forEach(function (v) {
+    var g = v.closest('[data-slider]') || v;
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(v);
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      groups.get(e.target).forEach(show);
+    });
+  }, { rootMargin: '600px 0px' });
+  groups.forEach(function (_, g) { io.observe(g); });
+})();
